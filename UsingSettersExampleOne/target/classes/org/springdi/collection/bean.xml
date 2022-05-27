@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="add" class="org.springdi.collection.Address">
+		<property name="city" value="Hyd"></property>
+		<property name="state" value="Telangana"></property>
+		<property name="country" value="India"></property>
+	</bean>
+
+	<bean id="emp" class="org.springdi.collection.Employee">
+	<property name="id" value="101"></property>
+	<property name="name" value="Virat"></property>
+		<property name="knownTechnologies">
+			<list>
+				<value>core java</value>
+				<value>HTML</value>
+				<value>CSS</value>
+				<value>Advanced Java</value>
+			</list>
+		</property>
+		<property name="phoneNumbers">
+			<set>
+				<value>121245125221</value>
+				<value>215431545132</value>
+			</set>
+		</property>
+		<property name="techRating">
+			<map>
+				<entry key="Core Java" value="4.0"></entry>
+				<entry key="HTMl" value="4.0"></entry>
+				<entry key="CSS" value="2.0"></entry>
+				<entry key="Advanced Java" value="3.5"></entry>
+			</map>
+		</property>
+
+		<property name="address" ref="add"></property>
+	</bean>
+
+
+
+</beans>
